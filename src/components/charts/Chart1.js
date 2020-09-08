@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import ChartDisplay from "../display-chart/ChartDisplay";
 
 import { ChartDataContext } from "../../context/ChartData";
@@ -32,8 +32,8 @@ export default function Chart1() {
         {
           label: "Bat or Field Decision",
           data: [batCount, fieldCount],
-          backgroundColor: ["rgba(121, 85, 72, 0.5)", "rgba(76, 175, 80, 0.5)"],
-          borderColor: ["rgba(121, 85, 72,1)", "rgba(76, 175, 80, 1)"],
+          backgroundColor: ["rgba(38, 70, 83, 0.5)", "rgba(42, 157, 143, 0.5)"],
+          borderColor: ["rgba(38, 70, 83, 1)", "rgba(42, 157, 143, 1)"],
           borderWidth: 1,
         },
       ],
@@ -47,9 +47,8 @@ export default function Chart1() {
         chartType="bar"
         displayLegend={false}
         chartData={chartData1}
-        titleText="Batting / Fielding Decision"
+        titleText="Batting / Fielding Toss Decision"
       />
-      <h1>Testing</h1>
     </>
   );
 }

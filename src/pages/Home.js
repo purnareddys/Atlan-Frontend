@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { Layout, Menu, Breadcrumb, Card, Col, Row } from "antd";
 import { PieChartOutlined } from "@ant-design/icons";
 import Chart1 from "../components/charts/Chart1";
+import Chart2 from "../components/charts/Chart2";
+import Chart3 from "../components/charts/Chart3";
+import Chart4 from "../components/charts/Chart4";
 const { Header, Content, Footer, Sider } = Layout;
 // const { SubMenu } = Menu;
 
@@ -46,10 +49,10 @@ function Home() {
               <Breadcrumb.Item>Dashboard</Breadcrumb.Item>
             </Breadcrumb>
             <div
-              className="site-layout-background"
+              className="site-layout-background content-container"
               style={{ padding: 24, minHeight: 360 }}
             >
-              <div className="site-card-wrapper">
+              <div className="chart-container">
                 <Row gutter={[24, 24]}>
                   <Col xs={24} xl={12}>
                     <Card
@@ -69,7 +72,7 @@ function Home() {
                       bordered={true}
                       hoverable
                     >
-                      <Chart1 />
+                      <Chart2 />
                     </Card>
                   </Col>
                 </Row>
@@ -82,7 +85,7 @@ function Home() {
                       bordered={true}
                       hoverable
                     >
-                      <Chart1 />
+                      <Chart3 />
                     </Card>
                   </Col>
                   <Col xs={24} xl={12} hoverable={true}>
@@ -92,7 +95,7 @@ function Home() {
                       bordered={true}
                       hoverable
                     >
-                      <Chart1 />
+                      <Chart4 />
                     </Card>
                   </Col>
                 </Row>

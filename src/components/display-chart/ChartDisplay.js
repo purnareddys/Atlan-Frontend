@@ -2,6 +2,15 @@ import React, { useState } from "react";
 import ChartComponent from "react-chartjs-2";
 
 export default function ChartDisplay({ chartType, chartData, ...restProps }) {
+  const defaultProps = {
+    chartType: "Bar",
+    displayTitle: true,
+    titleText: "Enter a title",
+    displayLegend: true,
+    legendPosition: "center",
+    selectLabel: false,
+    selectLabelText: "",
+  };
   return (
     <div className="chart">
       <ChartComponent
@@ -18,7 +27,7 @@ export default function ChartDisplay({ chartType, chartData, ...restProps }) {
           maintainAspectRatio: false,
           responsive: true,
           title: {
-            display: restProps.displayTitle,
+            display: defaultProps.displayTitle,
             text: restProps.titleText,
             fontSize: 25,
           },
@@ -26,8 +35,7 @@ export default function ChartDisplay({ chartType, chartData, ...restProps }) {
             display: restProps.displayLegend,
           },
           scales:
-            restProps.selectChart === "pie" ||
-            restProps.selectChart === "doughnut"
+            chartType === "pie" || chartType === "doughnut"
               ? {
                   xAxis: [
                     {
@@ -45,8 +53,8 @@ export default function ChartDisplay({ chartType, chartData, ...restProps }) {
                   xAxes: [
                     {
                       scaleLabel: {
-                        display: restProps.selectLabel ? true : false,
-                        labelString: restProps.selectLabelText,
+                        display: defaultProps.selectLabel ? true : false,
+                        labelString: defaultProps.selectLabelText,
                       },
                     },
                   ],
