@@ -12,3 +12,11 @@
 [data-theme="dark"] .site-layout .site-layout-background {
   background: #141414;
 }
+/* .custom-card {
+  border: 2px solid rgb(10, 226, 75);
+  box-shadow: rgba(7, 201, 23, 0.3) 0px 0px 20px;
+} */
+/* .custom-card :hover {
+  border: 2px solid rgb(10, 226, 75);
+  box-shadow: rgba(7, 201, 23, 0.3) 0px 0px 20px;
+} */

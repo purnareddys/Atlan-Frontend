@@ -5,10 +5,14 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import "antd/dist/antd.css";
 
+//import the Context Wrapper
+
+import { ChartDataContextProvider } from "./context/ChartData";
+
 ReactDOM.render(
-  <>
+  <ChartDataContextProvider>
     <App />
-  </>,
+  </ChartDataContextProvider>,
   document.getElementById("root")
 );
 

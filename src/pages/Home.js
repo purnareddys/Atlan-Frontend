@@ -1,15 +1,9 @@
 import React, { useState } from "react";
-import { Layout, Menu, Breadcrumb } from "antd";
-import {
-  DesktopOutlined,
-  PieChartOutlined,
-  FileOutlined,
-  TeamOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
-
+import { Layout, Menu, Breadcrumb, Card, Col, Row } from "antd";
+import { PieChartOutlined } from "@ant-design/icons";
+import Chart1 from "../components/charts/Chart1";
 const { Header, Content, Footer, Sider } = Layout;
-const { SubMenu } = Menu;
+// const { SubMenu } = Menu;
 
 function Home() {
   const [collapsed, setCollapsed] = useState(true);
@@ -18,10 +12,9 @@ function Home() {
       return !prevCol;
     });
   };
-
   return (
     <Layout>
-      <Header className="header">
+      <Header>
         <div className="logo" />
         {/* <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
           <Menu.Item key="1">nav 1</Menu.Item>
@@ -41,11 +34,14 @@ function Home() {
             <Menu.Item key="1" icon={<PieChartOutlined />}>
               Dashboard
             </Menu.Item>
+            <Menu.Item key="2" icon={<PieChartOutlined />}>
+              Insights
+            </Menu.Item>
           </Menu>
         </Sider>
         <Layout className="site-layout">
           <Header className="site-layout-background" style={{ padding: 0 }} />
-          <Content style={{ margin: "0 16px" }}>
+          <Content style={{ margin: "0 16px", color: "black" }}>
             <Breadcrumb style={{ margin: "16px 0" }}>
               <Breadcrumb.Item>Dashboard</Breadcrumb.Item>
             </Breadcrumb>
@@ -53,7 +49,54 @@ function Home() {
               className="site-layout-background"
               style={{ padding: 24, minHeight: 360 }}
             >
-              <h3>chart goes here</h3>
+              <div className="site-card-wrapper">
+                <Row gutter={[24, 24]}>
+                  <Col xs={24} xl={12}>
+                    <Card
+                      bodyStyle={{}}
+                      className="custom-card"
+                      title="Card title"
+                      bordered={true}
+                      hoverable
+                    >
+                      <Chart1 />
+                    </Card>
+                  </Col>
+                  <Col xs={24} xl={12} hoverable={true}>
+                    <Card
+                      className="custom-card"
+                      title="Card title"
+                      bordered={true}
+                      hoverable
+                    >
+                      <Chart1 />
+                    </Card>
+                  </Col>
+                </Row>
+                <Row gutter={[24, 24]}>
+                  <Col xs={24} xl={12}>
+                    <Card
+                      bodyStyle={{}}
+                      className="custom-card"
+                      title="Card title"
+                      bordered={true}
+                      hoverable
+                    >
+                      <Chart1 />
+                    </Card>
+                  </Col>
+                  <Col xs={24} xl={12} hoverable={true}>
+                    <Card
+                      className="custom-card"
+                      title="Card title"
+                      bordered={true}
+                      hoverable
+                    >
+                      <Chart1 />
+                    </Card>
+                  </Col>
+                </Row>
+              </div>
             </div>
           </Content>
           <Footer style={{ textAlign: "center" }}>
