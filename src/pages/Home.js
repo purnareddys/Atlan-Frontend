@@ -1,15 +1,20 @@
 import React, { useState } from "react";
-import { Layout, Menu, Breadcrumb, Card, Col, Row } from "antd";
+import { Layout, Menu, Breadcrumb, Card, Col, Row, Select } from "antd";
 import { PieChartOutlined } from "@ant-design/icons";
 import Chart1 from "../components/charts/Chart1";
 import Chart2 from "../components/charts/Chart2";
 import Chart3 from "../components/charts/Chart3";
 import Chart4 from "../components/charts/Chart4";
+import Chart5 from "../components/charts/Chart5";
+import Header1 from "../components/header/Header";
 const { Header, Content, Footer, Sider } = Layout;
 // const { SubMenu } = Menu;
 
 function Home() {
   const [collapsed, setCollapsed] = useState(true);
+  const [mostMatchesWinner, setMostMatchsWinner] = useState(2017);
+  const [topFiveVenues, setTopFiveVenues] = useState(2017);
+  const { Option } = Select;
   const onCollapse = (collapsed) => {
     setCollapsed((prevCol) => {
       return !prevCol;
@@ -85,7 +90,36 @@ function Home() {
                       bordered={true}
                       hoverable
                     >
-                      <Chart3 />
+                      <Select
+                        defaultValue="2017"
+                        style={{ width: 120 }}
+                        onChange={(e) => setTopFiveVenues(e)}
+                      >
+                        <Option value="2017">2017</Option>
+                        <Option value="2016">2016</Option>
+                        <Option value="2015">2015</Option>
+                      </Select>
+                      <Chart3 year={topFiveVenues} />
+                    </Card>
+                  </Col>
+                  <Col xs={24} xl={12} hoverable={true}>
+                    <Card
+                      className="custom-card"
+                      title="Card title"
+                      bordered={true}
+                      hoverable
+                    >
+                      {" "}
+                      <Select
+                        defaultValue="2017"
+                        style={{ width: 120 }}
+                        onChange={(e) => setMostMatchsWinner(e)}
+                      >
+                        <Option value="2017">2017</Option>
+                        <Option value="2016">2016</Option>
+                        <Option value="2015">2015</Option>
+                      </Select>
+                      <Chart5 year={mostMatchesWinner} />
                     </Card>
                   </Col>
                   <Col xs={24} xl={12} hoverable={true}>
@@ -97,6 +131,9 @@ function Home() {
                     >
                       <Chart4 />
                     </Card>
+                  </Col>
+                  <Col>
+                    <Header1 year={mostMatchesWinner} />
                   </Col>
                 </Row>
               </div>

@@ -21,7 +21,7 @@ export default function ChartDisplay({ chartType, chartData, ...restProps }) {
             deferred: {
               xOffset: 50,
               yOffset: "40%",
-              delay: 50,
+              delay: 70,
             },
           },
           maintainAspectRatio: false,
@@ -53,8 +53,11 @@ export default function ChartDisplay({ chartType, chartData, ...restProps }) {
                   xAxes: [
                     {
                       scaleLabel: {
-                        display: defaultProps.selectLabel ? true : false,
+                        display: false,
                         labelString: defaultProps.selectLabelText,
+                      },
+                      ticks: {
+                        beginAtZero: true,
                       },
                     },
                   ],

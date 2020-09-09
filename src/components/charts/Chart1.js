@@ -32,8 +32,12 @@ export default function Chart1() {
         {
           label: "Bat or Field Decision",
           data: [batCount, fieldCount],
-          backgroundColor: ["rgba(38, 70, 83, 0.5)", "rgba(42, 157, 143, 0.5)"],
-          borderColor: ["rgba(38, 70, 83, 1)", "rgba(42, 157, 143, 1)"],
+
+          backgroundColor: [
+            "rgba(255, 99, 132, 0.5)",
+            "rgba(54, 162, 235, 0.5)",
+          ],
+          borderColor: ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)"],
           borderWidth: 1,
         },
       ],

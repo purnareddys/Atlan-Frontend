@@ -22,9 +22,9 @@ export default function Chart4() {
     let tie = 0;
     data.data &&
       data.data.forEach((match, idx) => {
-        if (match.win_by_runs != 0) {
+        if (match.win_by_runs !== 0) {
           winByRuns += 1;
-        } else if (match.win_by_wickets != 0) {
+        } else if (match.win_by_wickets !== 0) {
           winByWickets += 1;
         } else {
           tie += 1;
@@ -34,17 +34,18 @@ export default function Chart4() {
       labels: ["Runs", "Wickets", "tie"],
       datasets: [
         {
-          label: "Result Type ",
+          label: "Runs/Wickets ",
           data: [winByRuns, winByWickets, tie],
           backgroundColor: [
-            "rgba(168, 218, 220, 1)",
-            "rgba(69, 123, 157, 1)",
-            "rgba(29, 53, 87, 1)",
+            "rgba(128, 203, 174, 0.5)",
+            "rgba(54, 162, 235, 0.5)",
+            "rgba(255, 99, 132, 0.5)",
           ],
           borderColor: [
-            "rgba(168, 218, 220, 0.5)",
-            "rgba(69, 123, 157, 0.5)",
-            "rgba(29, 53, 87, 0.5)",
+            "rgba(128, 203, 174, 1)",
+            "rgba(54, 162, 235, 1)",
+
+            "rgba(255, 99, 132, 1)",
           ],
           borderWidth: 1,
         },

@@ -33,14 +33,16 @@ export default function Chart2() {
           label: "Result Type ",
           data: [...Object.values(resultType)],
           backgroundColor: [
-            "rgba(168, 218, 220, 1)",
-            "rgba(69, 123, 157, 1)",
-            "rgba(29, 53, 87, 1)",
+            "rgba(255, 159, 64, 0.5)",
+
+            "rgba(54, 162, 235, 0.5)",
+
+            "rgba(255, 99, 132, 0.5)",
           ],
           borderColor: [
-            "rgba(168, 218, 220, 0.5)",
-            "rgba(69, 123, 157, 0.5)",
-            "rgba(29, 53, 87, 0.5)",
+            "rgba(255, 159, 64, 1)",
+            "rgba(54, 162, 235, 1)",
+            "rgba(255, 99, 132, 1)",
           ],
           borderWidth: 1,
         },

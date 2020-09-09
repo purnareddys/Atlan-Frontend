@@ -1,40 +1,45 @@
 import React, { useState, useContext, useEffect } from "react";
 import ChartDisplay from "../display-chart/ChartDisplay";
+
 import { ChartDataContext } from "../../context/ChartData";
 
-//Pending
-
-export default function Chart3({ year }) {
-  const [chartData3, setCharData3] = useState({});
+export default function Chart5({ year }) {
+  const [chartData5, setCharData5] = useState({});
   const [dataLoaded, setDataLoaded] = useState(false);
+  const [localYear, setLocalYear] = useState(2017);
   const { data } = useContext(ChartDataContext);
+
+  //   setLocalYear(parseInt(year));
 
   const callFunction = async () => {
     const len = (await data.data) && data.data.length;
     if (len > 0 && dataLoaded === false) {
-      chart_3_data(year);
+      chart_5_data(year);
       setDataLoaded(true);
     }
   };
-  useEffect(() => {
-    chart_3_data(year);
-  }, [year]);
   callFunction();
-  const chart_3_data = () => {
+  useEffect(() => {
+    chart_5_data(year);
+  }, [year]);
+  const chart_5_data = (year) => {
     console.log(year);
-    let venue = {};
+
+    let MostWins = {};
     data.data &&
       data.data.forEach((match, idx) => {
         if (match.season === parseInt(year)) {
-          if (venue[match.venue] !== undefined) {
-            venue[match.venue] += 1;
+          if (MostWins[match.winner] !== undefined) {
+            MostWins[match.winner] += 1;
           } else {
-            venue[match.venue] = 1;
+            MostWins[match.winner] = 1;
           }
         }
       });
-    const keys = [...Object.keys(venue)];
-    const values = [...Object.values(venue)];
+
+    //For finding the top 5 teams
+    const keys = [...Object.keys(MostWins)];
+    const values = [...Object.values(MostWins)];
 
     const arrayOfObj = keys.map(function (d, i) {
       return {
@@ -56,13 +61,13 @@ export default function Chart3({ year }) {
       newArrayName.push(d.name);
       newArrayData.push(d.data);
     });
-    console.log(newArrayData, newArrayName);
-    setCharData3({
-      labels: [...Object.values(newArrayName)],
+
+    setCharData5({
+      labels: [...newArrayName],
       datasets: [
         {
-          label: "Matches ",
-          data: [...Object.values(newArrayData)],
+          label: "Wins",
+          data: [...newArrayData],
           backgroundColor: [
             "rgba(255, 159, 64, 0.5)",
             "rgba(255, 99, 132, 0.5)",
@@ -86,10 +91,9 @@ export default function Chart3({ year }) {
   return (
     <>
       <ChartDisplay
-        chartType="horizontalBar"
-        displayLegend={false}
-        chartData={chartData3}
-        titleText={`Top 5 Venues of ${year}`}
+        chartType="bar"
+        chartData={chartData5}
+        titleText={`Most Match Winners ${year}`}
       />
     </>
   );
