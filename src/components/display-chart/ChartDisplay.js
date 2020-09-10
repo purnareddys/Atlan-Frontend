@@ -1,16 +1,16 @@
 import React from "react";
-import ChartComponent from "react-chartjs-2";
+// import ChartComponent from "react-chartjs-2";
 import "./Chart.css";
 export default function ChartDisplay({ chartType, chartData, ...restProps }) {
-  const defaultProps = {
-    chartType: "Bar",
-    displayTitle: true,
-    titleText: "Enter a title",
-    displayLegend: true,
-    legendPosition: "center",
-    selectLabel: false,
-    selectLabelText: "",
-  };
+  // const defaultProps = {
+  //   chartType: "Bar",
+  //   displayTitle: true,
+  //   titleText: "Enter a title",
+  //   displayLegend: true,
+  //   legendPosition: "center",
+  //   selectLabel: false,
+  //   selectLabelText: "",
+  // };
   return (
     // <div className="chart">
     //   <ChartComponent
