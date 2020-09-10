@@ -26,14 +26,15 @@ const useForceUpdate = () => useState()[1];
 
 function App() {
   const [selectedItem, setSelectedItem] = useState("Dashboard");
+
+  const resize = useForceUpdate();
   useEffect(() => {
     window.addEventListener("resize", resize);
 
     return () => {
       window.removeEventListener("resize", resize);
     };
-  }, []);
-  const resize = useForceUpdate();
+  }, [resize]);
 
   return (
     <Row className={css(styles.container)}>
