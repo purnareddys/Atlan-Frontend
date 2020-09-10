@@ -74,9 +74,9 @@ export default function ChartDisplay({ chartType, chartData, ...restProps }) {
     //   />
     // </div>
     <>
-      <div class="grid-item">grid item</div>
-      <div class="grid-item">grid item</div>
-      <div class="grid-item">grid item</div>
+      <div className="grid-item">grid item</div>
+      <div className="grid-item">grid item</div>
+      <div className="grid-item">grid item</div>
     </>
   );
 }
