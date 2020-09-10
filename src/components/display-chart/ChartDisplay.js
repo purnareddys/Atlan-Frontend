@@ -1,5 +1,5 @@
 import React from "react";
-// import ChartComponent from "react-chartjs-2";
+import ChartComponent from "react-chartjs-2";
 import "./Chart.css";
 export default function ChartDisplay({ chartType, chartData, ...restProps }) {
   const defaultProps = {
