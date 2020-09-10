@@ -6,7 +6,6 @@ import { ChartDataContext } from "../../context/ChartData";
 export default function Chart5({ year }) {
   const [chartData5, setCharData5] = useState({});
   const [dataLoaded, setDataLoaded] = useState(false);
-  const [localYear, setLocalYear] = useState(2017);
   const { data } = useContext(ChartDataContext);
 
   //   setLocalYear(parseInt(year));
@@ -23,8 +22,6 @@ export default function Chart5({ year }) {
     chart_5_data(year);
   }, [year]);
   const chart_5_data = (year) => {
-    console.log(year);
-
     let MostWins = {};
     data.data &&
       data.data.forEach((match, idx) => {

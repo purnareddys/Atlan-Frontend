@@ -1,3 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
 .logo {
   height: 32px;
   background: url("https://atlan.com/assets/img/atlan-blue.6ed81a56.svg");
@@ -5,18 +12,3 @@
   margin-left: 0;
   background-repeat: no-repeat;
 }
-
-.site-layout .site-layout-background {
-  background: #fff;
-}
-[data-theme="dark"] .site-layout .site-layout-background {
-  background: #141414;
-}
-/* .custom-card {
-  border: 2px solid rgb(10, 226, 75);
-  box-shadow: rgba(7, 201, 23, 0.3) 0px 0px 20px;
-} */
-/* .custom-card :hover {
-  border: 2px solid rgb(10, 226, 75);
-  box-shadow: rgba(7, 201, 23, 0.3) 0px 0px 20px;
-} */

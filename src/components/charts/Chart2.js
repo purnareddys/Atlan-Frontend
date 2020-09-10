@@ -56,6 +56,7 @@ export default function Chart2() {
         chartType="doughnut"
         chartData={chartData2}
         titleText="Result Type"
+        displayLegend={true}
       />
     </>
   );

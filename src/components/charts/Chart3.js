@@ -21,7 +21,6 @@ export default function Chart3({ year }) {
   }, [year]);
   callFunction();
   const chart_3_data = () => {
-    console.log(year);
     let venue = {};
     data.data &&
       data.data.forEach((match, idx) => {
@@ -56,7 +55,6 @@ export default function Chart3({ year }) {
       newArrayName.push(d.name);
       newArrayData.push(d.data);
     });
-    console.log(newArrayData, newArrayName);
     setCharData3({
       labels: [...Object.values(newArrayName)],
       datasets: [

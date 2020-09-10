@@ -58,6 +58,7 @@ export default function Chart4() {
       <ChartDisplay
         chartType="pie"
         chartData={chartData4}
+        displayLegend={true}
         titleText="Win by Runs / Wickets "
       />
     </>
