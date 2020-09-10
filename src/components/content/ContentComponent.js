@@ -30,23 +30,11 @@ const styles = StyleSheet.create({
       maxWidth: "none",
     },
   },
-  todayTrends: {
+
+  gridcontainer: {
     marginTop: 30,
-  },
-  lastRow: {
-    marginTop: 30,
-  },
-  unresolvedTickets: {
-    marginRight: 30,
-    "@media (max-width: 1024px)": {
-      marginRight: 0,
-    },
-  },
-  tasks: {
-    marginTop: 0,
-    "@media (max-width: 1024px)": {
-      marginTop: 30,
-    },
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fill, minmax(450px, 1fr))",
   },
 });
 
@@ -99,8 +87,8 @@ function ContentComponent() {
           />
         </Row>
       </Row>
-      <div className={css(styles.todayTrends)}>
-        <ChartDisplay bat="274" field="368">
+      <div className={css(styles.gridcontainer)}>
+        <ChartDisplay>
           <Chart1 />
         </ChartDisplay>
         <ChartDisplay>
