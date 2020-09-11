@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React from "react"; // useState
 import { Column, Row } from "simple-flexbox";
 import { StyleSheet, css } from "aphrodite/no-important";
 import MiniCardComponent from "./MiniCardComponent";
-import ChartDisplay from "./ChartDisplay";
+// import ChartDisplay from "./ChartDisplay";
 
-import { Form } from "react-bootstrap";
-import Chart1 from "../charts/Chart1";
-import Chart2 from "../charts/Chart2";
-import Chart3 from "../charts/Chart3";
-import Chart4 from "../charts/Chart4";
-import Chart5 from "../charts/Chart5";
+// import { Form } from "react-bootstrap";
+// import Chart1 from "../charts/Chart1";
+// import Chart2 from "../charts/Chart2";
+// import Chart3 from "../charts/Chart3";
+// import Chart4 from "../charts/Chart4";
+// import Chart5 from "../charts/Chart5";
 
 const styles = StyleSheet.create({
   cardsContainer: {
@@ -30,17 +30,25 @@ const styles = StyleSheet.create({
       maxWidth: "none",
     },
   },
-
+  griditem: {
+    background: "#b823c1",
+    color: "white",
+    padding: "1em 2em",
+    border: "2px solid purple",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
   gridcontainer: {
     marginTop: 30,
-    // display: "grid",
-    // gridTemplateColumns: "repeat(auto-fill, minmax(450px, 1fr))",
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fill, minmax(450px, 1fr))",
   },
 });
 
 function ContentComponent() {
-  const [topFiveVenues, setTopFiveVenues] = useState(2017);
-  const [mostMatchsWinner, setMostMatchsWinner] = useState(2017);
+  // const [topFiveVenues, setTopFiveVenues] = useState(2017);
+  // const [mostMatchsWinner, setMostMatchsWinner] = useState(2017);
   return (
     <Column>
       <Row
@@ -88,7 +96,7 @@ function ContentComponent() {
         </Row>
       </Row>
       <div className={css(styles.gridcontainer)}>
-        <ChartDisplay>
+        {/* <ChartDisplay>
           <Chart1 />
         </ChartDisplay>
         <ChartDisplay>
@@ -123,7 +131,11 @@ function ContentComponent() {
             <option value="2015">2015</option>
           </Form.Control>
           <Chart5 year={mostMatchsWinner} />
-        </ChartDisplay>
+        </ChartDisplay> */}
+        <div className={css(styles.griditem)}>normal grid</div>
+        <div className={css(styles.griditem)}>normal grid</div>
+        <div className={css(styles.griditem)}>normal grid</div>
+        <div className={css(styles.griditem)}>normal grid</div>
       </div>
     </Column>
   );

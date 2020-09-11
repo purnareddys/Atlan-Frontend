@@ -58,7 +58,7 @@ export default function ChartDisplay({ chartType, chartData, ...restProps }) {
                       },
                       ticks: {
                         beginAtZero: true,
-                        max: 10,
+                        maxTicksLimit: 6,
                       },
                     },
                   ],
@@ -66,6 +66,7 @@ export default function ChartDisplay({ chartType, chartData, ...restProps }) {
                     {
                       ticks: {
                         beginAtZero: true,
+                        maxTicksLimit: 6,
                       },
                     },
                   ],
