@@ -41,8 +41,8 @@ const styles = StyleSheet.create({
   },
   gridcontainer: {
     marginTop: 30,
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fill, minmax(450px, 1fr))",
+    // display: "grid",
+    // gridTemplateColumns: "repeat(auto-fill, minmax(450px, 1fr))",
   },
 });
 
