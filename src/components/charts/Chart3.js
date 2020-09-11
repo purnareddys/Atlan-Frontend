@@ -16,6 +16,47 @@ export default function Chart3({ year }) {
       setDataLoaded(true);
     }
   };
+
+  // The below code is for converting strings of words to Abbrevations
+  //For Example
+  //Rajiv Gandhi International Stadium ->  RGISU
+  //Implemented my own method but haven't included in the UI because of some
+  //rendering issues. :(
+
+  //code
+  //  let finalStr = "";
+  // let finalWordArr = [];
+
+  // const trimNamesWord = (string) => {
+  //   let isSpace = true;
+  //   for (let i = 0; i < string.length; i++) {
+  //     if (string[i] === " ") {
+  //       isSpace = true;
+  //     } else if (string[i] !== " " && isSpace === true) {
+  //       isSpace = false;
+  //       finalStr += string[i];
+  //     }
+  //   }
+  //   finalWordArr.push(finalStr);
+  //   // console.log(finalWordArr);
+  //   finalStr = "";
+  //   return finalWordArr;
+  // };
+  // const trimNamesString = async (names) => {
+  //   let finalStringArr = [];
+  //   for (let i = 0; i < names.length; i++) {
+  //     let tempString = names[i];
+  //     finalStringArr.push(trimNamesWord(tempString));
+  //   }
+  //   setTrimmedName(finalStringArr[0]);
+  //   return finalStringArr[0];
+  // };
+  // async function fun1() {
+  //   let res = await trimNamesString(newArrayName);
+
+  //   console.log(res);
+  // }
+  // fun1();
   useEffect(() => {
     const chart_3_data = () => {
       let venue = {};

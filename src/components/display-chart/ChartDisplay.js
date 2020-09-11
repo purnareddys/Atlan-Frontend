@@ -21,7 +21,7 @@ export default function ChartDisplay({ chartType, chartData, ...restProps }) {
             deferred: {
               xOffset: 50,
               yOffset: "40%",
-              delay: 70,
+              delay: 50,
             },
           },
           maintainAspectRatio: false,
