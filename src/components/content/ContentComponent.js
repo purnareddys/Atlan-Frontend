@@ -132,10 +132,10 @@ function ContentComponent() {
           </Form.Control>
           <Chart5 year={mostMatchsWinner} />
         </ChartDisplay> */}
+        {/* <div className={css(styles.griditem)}>normal grid</div>
         <div className={css(styles.griditem)}>normal grid</div>
         <div className={css(styles.griditem)}>normal grid</div>
-        <div className={css(styles.griditem)}>normal grid</div>
-        <div className={css(styles.griditem)}>normal grid</div>
+        <div className={css(styles.griditem)}>normal grid</div> */}
       </div>
     </Column>
   );
