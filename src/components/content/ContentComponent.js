@@ -5,7 +5,6 @@ import MiniCardComponent from "./MiniCardComponent";
 import ChartDisplay from "./ChartDisplay";
 import { ChartDataContext } from "../../context/ChartData";
 
-import { Form } from "react-bootstrap";
 import Chart1 from "../charts/Chart1";
 import Chart2 from "../charts/Chart2";
 import Chart3 from "../charts/Chart3";
@@ -120,16 +119,15 @@ function ContentComponent() {
             <Chart2 />
           </ChartDisplay>
           <ChartDisplay>
-            <Form.Control
-              as="select"
+            <select
               defaultValue="2017"
-              style={{ width: 120 }}
+              style={{ width: 120, borderRadius: ".25em", padding: "0.5em" }}
               onChange={(e) => setTopFiveVenues(e.target.value)}
             >
               <option value="2017">2017</option>
               <option value="2016">2016</option>
               <option value="2015">2015</option>
-            </Form.Control>
+            </select>
 
             <Chart3 year={topFiveVenues} />
           </ChartDisplay>
@@ -137,16 +135,16 @@ function ContentComponent() {
             <Chart4 />
           </ChartDisplay>
           <ChartDisplay>
-            <Form.Control
-              as="select"
+            <select
               defaultValue="2017"
-              style={{ width: 120 }}
+              style={{ width: 120, borderRadius: ".25em", padding: "0.5em" }}
               onChange={(e) => setMostMatchsWinner(e.target.value)}
             >
               <option value="2017">2017</option>
               <option value="2016">2016</option>
               <option value="2015">2015</option>
-            </Form.Control>
+            </select>
+
             <Chart5 year={mostMatchsWinner} />
           </ChartDisplay>
           <ChartDisplay>

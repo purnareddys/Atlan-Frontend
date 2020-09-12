@@ -5,7 +5,6 @@ import { StyleSheet, css } from "aphrodite";
 import Header from "./components/header/Header";
 import SidebarComponent from "./components/sidebar/SidebarComponent";
 import ContentComponent from "./components/content/ContentComponent";
-import "bootstrap/dist/css/bootstrap.min.css";
 const styles = StyleSheet.create({
   container: {
     height: "100%",
