@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import ChartDisplay from "../display-chart/ChartDisplay";
+// import { useWordTrimmer } from "../../hooks";
 
 import { ChartDataContext } from "../../context/ChartData";
 
@@ -8,6 +9,7 @@ export default function Chart5({ year }) {
   const [dataLoaded, setDataLoaded] = useState(false);
   const { data } = useContext(ChartDataContext);
 
+  // const temp = useWordTrimmer("is this working");
   //   setLocalYear(parseInt(year));
 
   const callFunction = async () => {
@@ -56,9 +58,9 @@ export default function Chart5({ year }) {
         newArrayName.push(d.name);
         newArrayData.push(d.data);
       });
-
+      // const someData = useFetch("testing.com");
       setCharData5({
-        labels: [...newArrayName],
+        labels: ["RCB", "MI", "Pune", "Chennai", "Punjab"],
         datasets: [
           {
             label: "Wins",

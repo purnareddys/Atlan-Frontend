@@ -6,7 +6,6 @@ import Header from "./components/header/Header";
 import SidebarComponent from "./components/sidebar/SidebarComponent";
 import ContentComponent from "./components/content/ContentComponent";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 const styles = StyleSheet.create({
   container: {
     height: "100%",
@@ -26,7 +25,6 @@ const useForceUpdate = () => useState()[1];
 
 function App() {
   const [selectedItem, setSelectedItem] = useState("Dashboard");
-
   const resize = useForceUpdate();
   useEffect(() => {
     window.addEventListener("resize", resize);

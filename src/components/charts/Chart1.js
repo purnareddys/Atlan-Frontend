@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import ChartDisplay from "../display-chart/ChartDisplay";
-
+import "./Chart.css";
+// import { Bar } from "react-chartjs-2";
 import { ChartDataContext } from "../../context/ChartData";
 
 export default function Chart1() {
@@ -44,7 +45,32 @@ export default function Chart1() {
     });
   };
   //   data.data && chart_1_data();
+  // const legend = {
+  //   display: true,
+  //   position: "bottom",
+  //   labels: {
+  //     fontColor: "#323130",
+  //     fontSize: 14,
+  //   },
+  // };
 
+  // const options = {
+  //   title: {
+  //     display: true,
+  //     text: "Bat / Field",
+  //     fontSize: 20,
+  //   },
+  //   scales: {
+  //     yAxes: [
+  //       {
+  //         ticks: {
+  //           suggestedMin: 0,
+  //           suggestedMax: 100,
+  //         },
+  //       },
+  //     ],
+  //   },
+  // };
   return (
     <>
       <ChartDisplay
@@ -54,5 +80,13 @@ export default function Chart1() {
         titleText="Batting / Fielding Toss Decision"
       />
     </>
+    // <div className="individual-chart">
+    //   <Bar
+    //     data={chartData1}
+    //     maintainAspectRatio={false}
+    //     legend={false}
+    //     options={options}
+    //   />
+    // </div>
   );
 }

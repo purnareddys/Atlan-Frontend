@@ -50,90 +50,95 @@ function ContentComponent() {
   const [topFiveVenues, setTopFiveVenues] = useState(2017);
   const [mostMatchsWinner, setMostMatchsWinner] = useState(2017);
   return (
-    <Column>
-      <Row
-        className={css(styles.cardsContainer)}
-        wrap
-        flexGrow={1}
-        horizontal="space-between"
-        breakpoints={{ 768: "column" }}
-      >
+    <>
+      <Column>
         <Row
-          className={css(styles.cardRow)}
+          className={css(styles.cardsContainer)}
           wrap
           flexGrow={1}
           horizontal="space-between"
-          breakpoints={{ 384: "column" }}
+          breakpoints={{ 768: "column" }}
         >
-          <MiniCardComponent
-            className={css(styles.miniCardContainer)}
-            title="Total Matchs"
-            value="637"
-          />
-          <MiniCardComponent
-            className={css(styles.miniCardContainer)}
-            title="Superovers"
-            value="7"
-          />
-        </Row>
-        <Row
-          className={css(styles.cardRow)}
-          wrap
-          flexGrow={1}
-          horizontal="space-between"
-          breakpoints={{ 384: "column" }}
-        >
-          <MiniCardComponent
-            className={css(styles.miniCardContainer)}
-            title="Win by Runs"
-            value="288"
-          />
-          <MiniCardComponent
-            className={css(styles.miniCardContainer)}
-            title="Win by Wickets"
-            value="339"
-          />
-        </Row>
-      </Row>
-      <div className={css(styles.gridcontainer)}>
-        <ChartDisplay>
-          <Chart1 />
-        </ChartDisplay>
-        <ChartDisplay>
-          <Chart2 />
-        </ChartDisplay>
-        <ChartDisplay>
-          <Form.Control
-            as="select"
-            defaultValue="2017"
-            style={{ width: 120 }}
-            onChange={(e) => setTopFiveVenues(e.target.value)}
+          <Row
+            className={css(styles.cardRow)}
+            wrap
+            flexGrow={1}
+            horizontal="space-between"
+            breakpoints={{ 384: "column" }}
           >
-            <option value="2017">2017</option>
-            <option value="2016">2016</option>
-            <option value="2015">2015</option>
-          </Form.Control>
+            <MiniCardComponent
+              className={css(styles.miniCardContainer)}
+              title="Total Matchs"
+              value="637"
+            />
+            <MiniCardComponent
+              className={css(styles.miniCardContainer)}
+              title="Superovers"
+              value="7"
+            />
+          </Row>
+          <Row
+            className={css(styles.cardRow)}
+            wrap
+            flexGrow={1}
+            horizontal="space-between"
+            breakpoints={{ 384: "column" }}
+          >
+            <MiniCardComponent
+              className={css(styles.miniCardContainer)}
+              title="Win by Runs"
+              value="288"
+            />
+            <MiniCardComponent
+              className={css(styles.miniCardContainer)}
+              title="Win by Wickets"
+              value="339"
+            />
+          </Row>
+        </Row>
+      </Column>
+      <Column>
+        <div className={css(styles.gridcontainer)}>
+          {/* <Chart1 /> */}
+          <ChartDisplay>
+            <Chart1 />
+          </ChartDisplay>
+          <ChartDisplay>
+            <Chart2 />
+          </ChartDisplay>
+          <ChartDisplay>
+            <Form.Control
+              as="select"
+              defaultValue="2017"
+              style={{ width: 120 }}
+              onChange={(e) => setTopFiveVenues(e.target.value)}
+            >
+              <option value="2017">2017</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+            </Form.Control>
 
-          <Chart3 year={topFiveVenues} />
-        </ChartDisplay>
-        <ChartDisplay>
-          <Chart4 />
-        </ChartDisplay>
-        <ChartDisplay>
-          <Form.Control
-            as="select"
-            defaultValue="2017"
-            style={{ width: 120 }}
-            onChange={(e) => setMostMatchsWinner(e.target.value)}
-          >
-            <option value="2017">2017</option>
-            <option value="2016">2016</option>
-            <option value="2015">2015</option>
-          </Form.Control>
-          <Chart5 year={mostMatchsWinner} />
-        </ChartDisplay>
-      </div>
-    </Column>
+            <Chart3 year={topFiveVenues} />
+          </ChartDisplay>
+          <ChartDisplay>
+            <Chart4 />
+          </ChartDisplay>
+          <ChartDisplay>
+            <Form.Control
+              as="select"
+              defaultValue="2017"
+              style={{ width: 120 }}
+              onChange={(e) => setMostMatchsWinner(e.target.value)}
+            >
+              <option value="2017">2017</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+            </Form.Control>
+            <Chart5 year={mostMatchsWinner} />
+          </ChartDisplay>
+        </div>
+      </Column>
+    </>
   );
 }
 
