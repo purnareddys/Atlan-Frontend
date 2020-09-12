@@ -53,12 +53,14 @@ export default function ChartDisplay({ chartType, chartData, ...restProps }) {
                   xAxes: [
                     {
                       scaleLabel: {
-                        display: false,
-                        labelString: defaultProps.selectLabelText,
+                        display: restProps.selectLabel ? true : false,
+                        labelString: restProps.selectLabelText
+                          ? restProps.selectLabelText
+                          : "",
                       },
                       ticks: {
                         beginAtZero: true,
-                        maxTicksLimit: 6,
+                        maxTicksLimit: 8,
                       },
                     },
                   ],

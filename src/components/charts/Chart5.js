@@ -1,15 +1,16 @@
 import React, { useState, useContext, useEffect } from "react";
 import ChartDisplay from "../display-chart/ChartDisplay";
-// import { useWordTrimmer } from "../../hooks";
+import { useWordTrimmer } from "../../hooks";
 
 import { ChartDataContext } from "../../context/ChartData";
 
 export default function Chart5({ year }) {
   const [chartData5, setCharData5] = useState({});
   const [dataLoaded, setDataLoaded] = useState(false);
+  const [toBeTrimmed, setToBeTrimmed] = useState([]);
   const { data } = useContext(ChartDataContext);
 
-  // const temp = useWordTrimmer("is this working");
+  const trimmedNames = useWordTrimmer(toBeTrimmed, "team");
   //   setLocalYear(parseInt(year));
 
   const callFunction = async () => {
@@ -58,9 +59,10 @@ export default function Chart5({ year }) {
         newArrayName.push(d.name);
         newArrayData.push(d.data);
       });
+      setToBeTrimmed(newArrayName);
       // const someData = useFetch("testing.com");
       setCharData5({
-        labels: ["RCB", "MI", "Pune", "Chennai", "Punjab"],
+        labels: [...trimmedNames],
         datasets: [
           {
             label: "Wins",
@@ -85,7 +87,7 @@ export default function Chart5({ year }) {
       });
     };
     chart_5_data(year);
-  }, [year, data.data]);
+  }, [year, data.data, trimmedNames]);
 
   return (
     <>
@@ -93,6 +95,8 @@ export default function Chart5({ year }) {
         chartType="bar"
         chartData={chartData5}
         titleText={`Most Match Winners ${year}`}
+        selectLabel={true}
+        selectLabelText="Overs"
       />
     </>
   );

@@ -1,14 +1,15 @@
 import React, { useState, useContext, useEffect } from "react";
 import ChartDisplay from "../display-chart/ChartDisplay";
 import { ChartDataContext } from "../../context/ChartData";
-
-//Pending
+import { useWordTrimmer } from "../../hooks";
 
 export default function Chart3({ year }) {
   const [chartData3, setCharData3] = useState({});
   const [dataLoaded, setDataLoaded] = useState(false);
+  const [tobeTrimmed, setTobeTrimmed] = useState([]);
   const { data } = useContext(ChartDataContext);
 
+  const trimmedNames = useWordTrimmer(tobeTrimmed, "venue");
   const callFunction = async () => {
     const len = (await data.data) && data.data.length;
     if (len > 0 && dataLoaded === false) {
@@ -17,46 +18,6 @@ export default function Chart3({ year }) {
     }
   };
 
-  // The below code is for converting strings of words to Abbrevations
-  //For Example
-  //Rajiv Gandhi International Stadium ->  RGISU
-  //Implemented my own method but haven't included in the UI because of some
-  //rendering issues. :(
-
-  //code
-  //  let finalStr = "";
-  // let finalWordArr = [];
-
-  // const trimNamesWord = (string) => {
-  //   let isSpace = true;
-  //   for (let i = 0; i < string.length; i++) {
-  //     if (string[i] === " ") {
-  //       isSpace = true;
-  //     } else if (string[i] !== " " && isSpace === true) {
-  //       isSpace = false;
-  //       finalStr += string[i];
-  //     }
-  //   }
-  //   finalWordArr.push(finalStr);
-  //   // console.log(finalWordArr);
-  //   finalStr = "";
-  //   return finalWordArr;
-  // };
-  // const trimNamesString = async (names) => {
-  //   let finalStringArr = [];
-  //   for (let i = 0; i < names.length; i++) {
-  //     let tempString = names[i];
-  //     finalStringArr.push(trimNamesWord(tempString));
-  //   }
-  //   setTrimmedName(finalStringArr[0]);
-  //   return finalStringArr[0];
-  // };
-  // async function fun1() {
-  //   let res = await trimNamesString(newArrayName);
-
-  //   console.log(res);
-  // }
-  // fun1();
   useEffect(() => {
     const chart_3_data = () => {
       let venue = {};
@@ -70,6 +31,9 @@ export default function Chart3({ year }) {
             }
           }
         });
+
+      //For finding the Top 5 Venues in which ipl matchs are played
+      //for a selected season
       const keys = [...Object.keys(venue)];
       const values = [...Object.values(venue)];
 
@@ -93,8 +57,9 @@ export default function Chart3({ year }) {
         newArrayName.push(d.name);
         newArrayData.push(d.data);
       });
+      setTobeTrimmed(newArrayName);
       setCharData3({
-        labels: [...Object.values(newArrayName)],
+        labels: [...trimmedNames],
         datasets: [
           {
             label: "Matches ",
@@ -120,7 +85,7 @@ export default function Chart3({ year }) {
     };
 
     chart_3_data(year);
-  }, [year, data.data]);
+  }, [year, data.data, trimmedNames]);
   callFunction();
 
   return (
