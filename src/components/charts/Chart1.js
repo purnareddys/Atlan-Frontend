@@ -1,6 +1,10 @@
 import React, { useState, useContext } from "react";
 import ChartDisplay from "../display-chart/ChartDisplay";
+
+//context
 import { ChartDataContext } from "../../context/ChartData";
+
+// Chart Component for Bat / Field Toss Decision
 
 export default function Chart1() {
   const [chartData1, setCharData1] = useState({});
@@ -42,33 +46,7 @@ export default function Chart1() {
       ],
     });
   };
-  //   data.data && chart_1_data();
-  // const legend = {
-  //   display: true,
-  //   position: "bottom",
-  //   labels: {
-  //     fontColor: "#323130",
-  //     fontSize: 14,
-  //   },
-  // };
 
-  // const options = {
-  //   title: {
-  //     display: true,
-  //     text: "Bat / Field",
-  //     fontSize: 20,
-  //   },
-  //   scales: {
-  //     yAxes: [
-  //       {
-  //         ticks: {
-  //           suggestedMin: 0,
-  //           suggestedMax: 100,
-  //         },
-  //       },
-  //     ],
-  //   },
-  // };
   return (
     <>
       <ChartDisplay
@@ -78,13 +56,5 @@ export default function Chart1() {
         titleText="Bat / Field Toss Decision"
       />
     </>
-    // <div className="individual-chart">
-    //   <Bar
-    //     data={chartData1}
-    //     maintainAspectRatio={false}
-    //     legend={false}
-    //     options={options}
-    //   />
-    // </div>
   );
 }

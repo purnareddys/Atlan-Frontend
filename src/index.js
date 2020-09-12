@@ -4,8 +4,7 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
-//import the Context Wrapper
-
+//import the Context Wrapper (context Provider)
 import { ChartDataContextProvider } from "./context/ChartData";
 
 ReactDOM.render(

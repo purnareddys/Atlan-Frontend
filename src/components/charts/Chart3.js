@@ -3,6 +3,8 @@ import ChartDisplay from "../display-chart/ChartDisplay";
 import { ChartDataContext } from "../../context/ChartData";
 import { useWordTrimmer } from "../../hooks";
 
+//Chart component for Top 5 Venues
+
 export default function Chart3({ year }) {
   const [chartData3, setCharData3] = useState({});
   const [dataLoaded, setDataLoaded] = useState(false);
@@ -13,7 +15,6 @@ export default function Chart3({ year }) {
   const callFunction = async () => {
     const len = (await data.data) && data.data.length;
     if (len > 0 && dataLoaded === false) {
-      // chart_3_data(year);
       setDataLoaded(true);
     }
   };

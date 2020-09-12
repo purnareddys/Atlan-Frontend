@@ -1,7 +1,8 @@
 import React, { useState, useContext } from "react";
 import ChartDisplay from "../display-chart/ChartDisplay";
-
 import { ChartDataContext } from "../../context/ChartData";
+
+//Chart Component for Result Type
 
 export default function Chart2() {
   const [chartData2, setCharData2] = useState({});

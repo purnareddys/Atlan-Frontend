@@ -5,11 +5,3 @@ body {
   margin: 0;
   padding: 0;
 }
-.logo {
-  height: 32px;
-  /* background: url("https://atlan.com/assets/img/atlan-blue.6ed81a56.svg"); */
-  margin: 16px;
-  margin-left: 0;
-  background-repeat: no-repeat;
-  background: #3751ff;
-}

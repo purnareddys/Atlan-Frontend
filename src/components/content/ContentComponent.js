@@ -42,8 +42,6 @@ const styles = StyleSheet.create({
   },
   gridcontainer: {
     marginTop: 30,
-    // display: "grid",
-    // gridTemplateColumns: "repeat(auto-fill, minmax(450px, 1fr))",
   },
 });
 
@@ -100,7 +98,6 @@ function ContentComponent() {
       </Column>
       <Column>
         <div className={css(styles.gridcontainer)}>
-          {/* <Chart1 /> */}
           <ChartDisplay>
             <Chart1 />
           </ChartDisplay>

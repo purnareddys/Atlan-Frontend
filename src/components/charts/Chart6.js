@@ -1,7 +1,9 @@
 import React, { useState, useContext } from "react";
 import ChartDisplay from "../display-chart/ChartDisplay";
-
+//context
 import { ChartDataContext } from "../../context/ChartData";
+
+//Chart Component for Ms Dhoni, man of the Matches
 
 export default function Chart6() {
   const [chartData6, setCharData6] = useState({});

@@ -1,7 +1,8 @@
 import React, { useState, useContext } from "react";
 import ChartDisplay from "../display-chart/ChartDisplay";
-
 import { ChartDataContext } from "../../context/ChartData";
+
+//Chart Component for Win by Runs/ Wickets
 
 export default function Chart4() {
   const [chartData4, setCharData4] = useState({});

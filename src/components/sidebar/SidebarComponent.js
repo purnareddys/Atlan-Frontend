@@ -74,11 +74,6 @@ function SidebarComponent({ onChange, selectedItem }) {
   const [, updateState] = React.useState();
   const forceUpdate = useCallback(() => updateState({}), []);
 
-  /**
-   * This is to fix this issue:
-   * https://github.com/llorentegerman/react-admin-dashboard/issues/8
-   * I haven't been able to reproduce this bug in Safari 13.0.5 (14608.5.12)
-   */
   useEffect(() => {
     setIsMobile(window.innerWidth <= 768);
     forceUpdate();

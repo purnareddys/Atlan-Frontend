@@ -1,8 +1,13 @@
 import React, { useState, useContext, useEffect } from "react";
 import ChartDisplay from "../display-chart/ChartDisplay";
+
+// Custom hook
 import { useWordTrimmer } from "../../hooks";
 
+//context
 import { ChartDataContext } from "../../context/ChartData";
+
+// Chart Component for Most Match Winner for a perticular season
 
 export default function Chart5({ year }) {
   const [chartData5, setCharData5] = useState({});
@@ -11,12 +16,10 @@ export default function Chart5({ year }) {
   const { data } = useContext(ChartDataContext);
 
   const trimmedNames = useWordTrimmer(toBeTrimmed, "team");
-  //   setLocalYear(parseInt(year));
 
   const callFunction = async () => {
     const len = (await data.data) && data.data.length;
     if (len > 0 && dataLoaded === false) {
-      // chart_5_data(year);
       setDataLoaded(true);
     }
   };
@@ -60,7 +63,6 @@ export default function Chart5({ year }) {
         newArrayData.push(d.data);
       });
       setToBeTrimmed(newArrayName);
-      // const someData = useFetch("testing.com");
       setCharData5({
         labels: [...trimmedNames],
         datasets: [

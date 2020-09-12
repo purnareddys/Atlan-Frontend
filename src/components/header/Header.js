@@ -3,7 +3,6 @@ import { Row } from "simple-flexbox";
 import { StyleSheet, css } from "aphrodite";
 import IconSearch from "../../assets/icon-search";
 import IconBellNew from "../../assets/icon-bell-new";
-import "./Header.css";
 const styles = StyleSheet.create({
   avatar: {
     height: 35,

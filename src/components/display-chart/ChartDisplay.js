@@ -2,10 +2,12 @@ import React from "react";
 import ChartComponent from "react-chartjs-2";
 import "./Chart.css";
 export default function ChartDisplay({ chartType, chartData, ...restProps }) {
+  // default Properties, if we haven't recived some of the props from chart
+  //components
   const defaultProps = {
-    chartType: "Bar",
+    chartType: "pie",
     displayTitle: true,
-    titleText: "Enter a title",
+    titleText: "Title",
     displayLegend: true,
     legendPosition: "center",
     selectLabel: false,
@@ -76,10 +78,5 @@ export default function ChartDisplay({ chartType, chartData, ...restProps }) {
         }}
       />
     </div>
-    // <>
-    //   <div className="grid-item">grid item</div>
-    //   <div className="grid-item">grid item</div>
-    //   <div className="grid-item">grid item</div>
-    // </>
   );
 }
