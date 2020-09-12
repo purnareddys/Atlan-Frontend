@@ -10,6 +10,7 @@ import Chart2 from "../charts/Chart2";
 import Chart3 from "../charts/Chart3";
 import Chart4 from "../charts/Chart4";
 import Chart5 from "../charts/Chart5";
+import Chart6 from "../charts/Chart6";
 
 const styles = StyleSheet.create({
   cardsContainer: {
@@ -135,6 +136,9 @@ function ContentComponent() {
               <option value="2015">2015</option>
             </Form.Control>
             <Chart5 year={mostMatchsWinner} />
+          </ChartDisplay>
+          <ChartDisplay>
+            <Chart6 />
           </ChartDisplay>
         </div>
       </Column>
