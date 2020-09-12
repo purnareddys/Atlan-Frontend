@@ -1,11 +1,16 @@
 import React from "react";
 import { Row } from "simple-flexbox";
 import { StyleSheet, css } from "aphrodite";
+import logo from "../img/atlan-blue-main.png";
 
 const styles = StyleSheet.create({
   container: {
     marginLeft: 32,
     marginRight: 32,
+  },
+  logoContainer: {
+    width: "100%",
+    textAlign: "center",
   },
   title: {
     fontFamily: "Muli",
@@ -27,13 +32,13 @@ function LogoComponent() {
       horizontal="center"
       vertical="center"
     >
-      <span>
+      <div className="logoContainer">
         <img
-          src="https://atlan.com/assets/img/atlan-blue.6ed81a56.svg"
+          src={logo}
           alt="logo-atlan"
-          style={{ height: 50, width: 100 }}
+          style={{ width: "80%", margin: "0px auto" }}
         />
-      </span>
+      </div>
       <span className={css(styles.title)}>IPL Stats</span>
     </Row>
   );

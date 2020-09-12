@@ -77,7 +77,7 @@ export default function Chart1() {
         chartType="bar"
         displayLegend={false}
         chartData={chartData1}
-        titleText="Batting / Fielding Toss Decision"
+        titleText="Bat / Field Toss Decision"
       />
     </>
     // <div className="individual-chart">
