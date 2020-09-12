@@ -7,7 +7,7 @@ import { ChartDataContext } from "../../context/ChartData";
 export default function Chart2() {
   const [chartData2, setCharData2] = useState({});
   const [dataLoaded, setDataLoaded] = useState(false);
-  const { data } = useContext(ChartDataContext);
+  const { data, getSuperOvers } = useContext(ChartDataContext);
 
   const callFunction = async () => {
     const len = (await data.data) && data.data.length;
@@ -27,6 +27,7 @@ export default function Chart2() {
           resultType[match.result] = 1;
         }
       });
+    getSuperOvers(resultType.tie);
     setCharData2({
       labels: [...Object.keys(resultType)],
       datasets: [

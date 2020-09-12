@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Column, Row } from "simple-flexbox";
 import { StyleSheet, css } from "aphrodite/no-important";
 import MiniCardComponent from "./MiniCardComponent";
 import ChartDisplay from "./ChartDisplay";
+import { ChartDataContext } from "../../context/ChartData";
 
 import { Form } from "react-bootstrap";
 import Chart1 from "../charts/Chart1";
@@ -46,10 +47,15 @@ const styles = StyleSheet.create({
 });
 
 function ContentComponent() {
+  const { totalMatches, superOvers, winByRunsWickets } = useContext(
+    ChartDataContext
+  );
   const [topFiveVenues, setTopFiveVenues] = useState(2017);
   const [mostMatchsWinner, setMostMatchsWinner] = useState(2017);
-  return (
-    <>
+
+  const MyOptimizedComponent = React.memo(function MyComponent(props) {
+    /* render using props */
+    return (
       <Column>
         <Row
           className={css(styles.cardsContainer)}
@@ -68,12 +74,12 @@ function ContentComponent() {
             <MiniCardComponent
               className={css(styles.miniCardContainer)}
               title="Total Matchs"
-              value="637"
+              value={props.totalMatches}
             />
             <MiniCardComponent
               className={css(styles.miniCardContainer)}
               title="Superovers"
-              value="7"
+              value={props.superOvers}
             />
           </Row>
           <Row
@@ -86,16 +92,25 @@ function ContentComponent() {
             <MiniCardComponent
               className={css(styles.miniCardContainer)}
               title="Win by Runs"
-              value="288"
+              value={props.winByRunsWickets[0]}
             />
             <MiniCardComponent
               className={css(styles.miniCardContainer)}
               title="Win by Wickets"
-              value="339"
+              value={props.winByRunsWickets[1]}
             />
           </Row>
         </Row>
       </Column>
+    );
+  });
+  return (
+    <>
+      <MyOptimizedComponent
+        totalMatches={totalMatches}
+        superOvers={superOvers}
+        winByRunsWickets={winByRunsWickets}
+      />
       <Column>
         <div className={css(styles.gridcontainer)}>
           <ChartDisplay>

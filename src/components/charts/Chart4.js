@@ -7,7 +7,7 @@ import { ChartDataContext } from "../../context/ChartData";
 export default function Chart4() {
   const [chartData4, setCharData4] = useState({});
   const [dataLoaded, setDataLoaded] = useState(false);
-  const { data } = useContext(ChartDataContext);
+  const { data, getRunsWickets } = useContext(ChartDataContext);
 
   const callFunction = async () => {
     const len = (await data.data) && data.data.length;
@@ -31,6 +31,7 @@ export default function Chart4() {
           tie += 1;
         }
       });
+    getRunsWickets(winByRuns, winByWickets);
     setCharData4({
       labels: ["Runs", "Wickets", "tie"],
       datasets: [
