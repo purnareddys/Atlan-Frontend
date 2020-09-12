@@ -17,10 +17,6 @@ export default function Chart6() {
   };
   callFunction();
   const chart_6_data = () => {
-    let winByRuns = 0;
-    let winByWickets = 0;
-    let tie = 0;
-
     let manOfTheMatch2012 = 0;
     let manOfTheMatch2013 = 0;
     let manOfTheMatch2014 = 0;
