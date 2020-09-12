@@ -1,7 +1,5 @@
 import React, { useState, useContext } from "react";
 import ChartDisplay from "../display-chart/ChartDisplay";
-import "./Chart.css";
-// import { Bar } from "react-chartjs-2";
 import { ChartDataContext } from "../../context/ChartData";
 
 export default function Chart1() {
