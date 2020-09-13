@@ -5,7 +5,7 @@ A data visualization challenge to build a web app and PWA with IPL (Indian Premi
 - Responsive Design
 - Mobile friendly
 
-![Screetshot of Project Web View](https://imgur.com/a/eCMmaMp)
+![Screetshot of Project Web View](https://res.cloudinary.com/dhbiia9jk/image/upload/v1599978137/Screenshot_175_ncqpht.png)
 
 ## Built With
 
@@ -32,8 +32,8 @@ A data visualization challenge to build a web app and PWA with IPL (Indian Premi
 - It is a PWA(Progressive Web App) as verified on [Lighthouse](https://developers.google.com/web/tools/lighthouse/). It is fast and reliable, installable, PWA optimized.
 - It is offline usable.
 
-![Screetshot of Project(Mobile view)](https://imgur.com/a/vvli3Py)
-![Screetshot of Project(Mobile view)](https://imgur.com/a/t7iueuD)
+![Screetshot of Project(Mobile view)](https://res.cloudinary.com/dhbiia9jk/image/upload/v1599978137/1_oawjnp.png)
+![Screetshot of Project(Mobile view)](https://res.cloudinary.com/dhbiia9jk/image/upload/v1599978137/2_gqgtym.png)
 
 ## Imporvements /Future Updates
 
