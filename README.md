@@ -24,7 +24,7 @@ A data visualization challenge to build a web app and PWA with IPL (Indian Premi
 
 ## Bonus Points
 
-- The App is built with React (Hooks), but also I am very interested on learning Vue aswell.(The entire app is built with Hooks, no class components!)
+- The App is built with React (Hooks). I choose React because I have been using React for more than an year, but I am very interested in learning Vue aswell.(The entire app is built with Hooks, no class components!)
 - Used Context so that each and every component in the app which requires the chart data can be taken from context.
 - Only once the csv data will be parsed with papaparser and then that parsed data is available in Local Storage.
 - Implemented a Custom Hook which converts words of a string to abbreviated form. For Example:- Chennai Super Kings-> CSK
