@@ -113,6 +113,19 @@ function ContentComponent() {
       <Column>
         <div className={css(styles.gridcontainer)}>
           <ChartDisplay>
+            <select
+              defaultValue="2017"
+              style={{ width: 120, borderRadius: ".25em", padding: "0.5em" }}
+              onChange={(e) => setMostMatchsWinner(e.target.value)}
+            >
+              <option value="2017">2017</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+            </select>
+
+            <Chart5 year={mostMatchsWinner} />
+          </ChartDisplay>
+          <ChartDisplay>
             <Chart1 />
           </ChartDisplay>
           <ChartDisplay>

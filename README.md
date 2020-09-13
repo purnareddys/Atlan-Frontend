@@ -1,68 +1,41 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Front End Engineer Challenge – IPL
 
-## Available Scripts
+A data visualization challenge to build a web app and PWA with IPL (Indian Premier League) Data. Goal is to present some interesting information and stats about IPL.
 
-In the project directory, you can run:
+- Responsive Design
+- Mobile friendly
 
-### `yarn start`
+![Screetshot of Project Web View](https://imgur.com/a/eCMmaMp)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Built With
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- [React](https://reactjs.org/) - the web framework used
+- [Chart.js](https://www.chartjs.org/) - used to create charts
+- [Papaparse](https://www.papaparse.com/) - for parsing CSV files to JSON
 
-### `yarn test`
+## Link to Hosted Website
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Click Here](https://socialcops.netlify.com)  
+  _(Hosted on Netlify)_
 
-### `yarn build`
+## Dataset
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Click Here](https://www.kaggle.com/saurav9786/indian-premier-league-match-analysis)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Bonus Points
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- The App is built with React (Hooks), but also I am very interested on learning Vue aswell.(The entire app is built with Hooks, no class components!)
+- Used Context so that each and every component in the app which requires the chart data can be taken from context.
+- Only once the csv data will be parsed with papaparser and then that parsed data is available in Local Storage.
+- Implemented a Custom Hook which converts words of a string to abbreviated form. For Example:- Chennai Super Kings-> CSK
+- For better optimization, I have used React.memo HOC(Higher Order Component) for caching the previous props values of the component(Used in mini-card-component)
+- It is a PWA(Progressive Web App) as verified on [Lighthouse](https://developers.google.com/web/tools/lighthouse/). It is fast and reliable, installable, PWA optimized.
+- It is offline usable.
 
-### `yarn eject`
+![Screetshot of Project(Mobile view)](https://imgur.com/a/vvli3Py)
+![Screetshot of Project(Mobile view)](https://imgur.com/a/t7iueuD)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Imporvements /Future Updates
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Light/Dark Theme
+- Code-splitting the app which helps us to “lazy-load” just the things that are currently needed by the user, which can dramatically improve the performance of our app.

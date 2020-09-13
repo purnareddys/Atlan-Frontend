@@ -98,7 +98,7 @@ export default function Chart5({ year }) {
         chartData={chartData5}
         titleText={`Most Match Winners ${year}`}
         selectLabel={true}
-        selectLabelText="Overs"
+        selectLabelText="Team"
       />
     </>
   );

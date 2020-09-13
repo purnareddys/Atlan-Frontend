@@ -140,6 +140,8 @@ export default function Chart6() {
         chartData={chartData6}
         displayLegend={true}
         titleText="Man of the Match"
+        selectLabel={true}
+        selectLabelText="Season"
       />
     </>
   );
