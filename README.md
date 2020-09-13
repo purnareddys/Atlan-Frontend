@@ -9,13 +9,13 @@ A data visualization challenge to build a web app and PWA with IPL (Indian Premi
 
 ## Built With
 
-- [React](https://reactjs.org/) - the web framework used
-- [Chart.js](https://www.chartjs.org/) - used to create charts
-- [Papaparse](https://www.papaparse.com/) - for parsing CSV files to JSON
+- [React](https://reactjs.org/) - Frontend web framework
+- [Chart.js](https://www.chartjs.org/) - To create charts
+- [Papaparse](https://www.papaparse.com/) - For parsing CSV files to JSON
 
 ## Link to Hosted Website
 
-- [Click Here](https://socialcops.netlify.com)  
+- [Click Here](https://atlan-iplstats.netlify.app/)  
   _(Hosted on Netlify)_
 
 ## Dataset
@@ -32,8 +32,9 @@ A data visualization challenge to build a web app and PWA with IPL (Indian Premi
 - It is a PWA(Progressive Web App) as verified on [Lighthouse](https://developers.google.com/web/tools/lighthouse/). It is fast and reliable, installable, PWA optimized.
 - It is offline usable.
 
-![Screetshot of Project(Mobile view)](https://res.cloudinary.com/dhbiia9jk/image/upload/v1599978137/1_oawjnp.png)
-![Screetshot of Project(Mobile view)](https://res.cloudinary.com/dhbiia9jk/image/upload/v1599978137/2_gqgtym.png)
+## Screenshots
+
+- [Click Here](https://imgur.com/a/QVKZOcj)
 
 ## Imporvements /Future Updates
 
