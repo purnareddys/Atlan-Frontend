@@ -15,8 +15,7 @@ A data visualization challenge to build a web app and PWA with IPL (Indian Premi
 
 ## Link to Hosted Website
 
-- [Click Here](https://atlan-iplstats.netlify.app/)  
-  _(Hosted on Netlify)_
+- [Click Here](https://atlan-iplstats.netlify.app/)
 
 ## Dataset
 
