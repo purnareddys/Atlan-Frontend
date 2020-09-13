@@ -35,7 +35,7 @@ A data visualization challenge to build a web app and PWA with IPL (Indian Premi
 
 - [Click Here](https://imgur.com/a/QVKZOcj)
 
-## Imporvements /Future Updates
+## Improvements /Future Updates
 
 - Light/Dark Theme
 - Code-splitting the app which helps us to “lazy-load” just the things that are currently needed by the user, which can dramatically improve the performance of our app.
